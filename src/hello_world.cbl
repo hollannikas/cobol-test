@@ -1,5 +1,31 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. HELLO-WORLD.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       SELECT DATA-FILE ASSIGN TO "data/test.dat"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD DATA-FILE.
+       01 DATA-RECORD PIC X(80).
+
+       WORKING-STORAGE SECTION.
+       01 EOF-FLAG PIC X VALUE 'N'.
+
        PROCEDURE DIVISION.
-           DISPLAY "Hello World!".
+       MAIN-PROCEDURE.
+           OPEN INPUT DATA-FILE
+           READ DATA-FILE
+               AT END MOVE 'Y' TO EOF-FLAG
+           END-READ
+           PERFORM UNTIL EOF-FLAG = 'Y'
+               DISPLAY DATA-RECORD
+               READ DATA-FILE
+                   AT END MOVE 'Y' TO EOF-FLAG
+               END-READ
+           END-PERFORM
+           CLOSE DATA-FILE
            STOP RUN.
