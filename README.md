@@ -9,14 +9,35 @@ A brief description of your project.
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Prerequisites](#prerequisites)
+- [Builsing](#building)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
+## Prerequisites
+To install and use this project, you will need to have the following prerequisites:
 
-Instructions on how to install and set up the project.
+- GNU COBOL: The GNU COBOL compiler is required to compile and run COBOL programs. You can install it by following the instructions on the [GNU COBOL website](https://sourceforge.net/projects/open-cobol/).
+
+
+- GNU Make: GNU Make is a build automation tool that is commonly used to compile and build projects. You can install it by following the instructions for your operating system:
+
+
+    - For Linux: GNU Make is usually pre-installed on most Linux distributions. You can check if it is installed by running the command `make --version` in your terminal. If it is not installed, you can install it using your package manager. For example, on Ubuntu, you can run `sudo apt-get install build-essential` to install GNU Make.
+
+    - For macOS: GNU Make is not pre-installed on macOS. You can install it using package managers like Homebrew or MacPorts. For example, with Homebrew, you can run `brew install make` to install GNU Make.
+
+    - For Windows: GNU Make is not natively available on Windows. However, you can install it using tools like Cygwin or MinGW. Cygwin provides a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows. MinGW is a minimalist development environment for native Microsoft Windows applications. You can choose either of these tools and follow their respective installation instructions to install GNU Make.
+
+Once you have installed GNU COBOL and GNU Make, you will be ready to proceed with the installation of this project.
+
+## Building
+
+```zsh
+make
+./hello_world
+```
 
 ## Usage
 
