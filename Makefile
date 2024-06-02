@@ -3,7 +3,7 @@ COB = cobc
 COBFLAGS = -x -free
 
 # Target executable
-TARGET = hello_world
+TARGET = bin/hello_world
 
 # Source file
 SRCS = src/*.cbl

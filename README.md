@@ -36,7 +36,7 @@ Once you have installed GNU COBOL and GNU Make, you will be ready to proceed wit
 
 ```zsh
 make
-./hello_world
+bin/hello_world
 ```
 
 ## Usage
